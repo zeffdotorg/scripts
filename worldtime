@@ -1,0 +1,102 @@
+#!/bin/sh
+
+# AM/PM format "; date "+%a %I:%M%p %Y-%m-%d"
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+echo ""
+
+TZ=Pacific/Auckland ; export TZ
+echo -n "Auckland	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Australia/Melbourne ; export TZ
+echo -n "Melbourne	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+#TZ=Australia/Brisbane ; export TZ
+#echo -n "Brisbane	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Tokyo ; export TZ
+echo -n "Tokyo		: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Kuala_Lumpur ; export TZ
+echo -n "Kuala Lumpur   	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Manila ; export TZ
+echo -n "Manila   	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Singapore ; export TZ
+echo -n "Singapore	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Shanghai ; export TZ
+echo -n "Shanghai	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Bangkok ; export TZ
+echo -n "Bangkok  	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Ho_Chi_Minh ; export TZ
+echo -n "Ho Chi Minh	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Kolkata ; export TZ
+echo -n "Mumbai          : "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Karachi ; export TZ
+echo -n "Islamabad       : "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Asia/Dubai ; export TZ
+echo -n "Dubai		: "; date "+%a %k:%M  %Y-%m-%d  %z"
+
+TZ=Asia/Kuwait ; export TZ
+echo -n "Kuwait		: "; date "+%a %k:%M  %Y-%m-%d  %z"
+
+TZ=Asia/Amman ; export TZ
+echo -n "Amman		: "; date "+%a %k:%M  %Y-%m-%d  %z"
+
+TZ=Africa/Cairo ; export TZ
+echo -n "Cairo		: "; date "+%a %k:%M  %Y-%m-%d  %z"
+
+TZ=Europe/Istanbul ; export TZ
+echo -n "Turkey		: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+#TZ=Europe/Helsinki ; export TZ
+#echo -n "Finland		: "; date "+%a %k:%M  %Y-%m-%d"
+
+#TZ=Europe/Sofia ; export TZ
+#echo -n "Bulgaria	: "; date "+%a %k:%M  %Y-%m-%d"
+
+TZ=Africa/Johannesburg ; export TZ
+echo -n "Johannesburg	: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+#TZ=Europe/Paris ; export TZ
+#echo -n "Paris		: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Europe/Copenhagen ; export TZ
+echo -n "Denmark		: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Europe/Madrid ; export TZ
+echo -n "Madrid		: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+TZ=Europe/London ; export TZ
+echo -n "London		: "; date "+%a %k:%M  %Y-%m-%d  %z";
+
+#echo -n "\033[1m"
+#echo -n "GMT		: "; date -u "+%a %k:%M  %Y-%m-%d"
+#echo -n "\033[0m"
+GMT_DATE=`date -u "+%a %k:%M  %Y-%m-%d  %z"`;
+echo  "\033[1mGMT             : ${GMT_DATE}\033[0m"; # bold
+#echo "\033[1mGMT             : ${GMT_DATE}\033[0m" # bold
+
+TZ=America/New_York ; export TZ
+echo -n "New York	: "; date "+%a %k:%M  %Y-%m-%d""  %z"
+
+TZ=Canada/Eastern ; export TZ
+echo -n "Toronto		: "; date "+%a %k:%M  %Y-%m-%d""  %z"
+
+TZ=America/Los_Angeles ; export TZ
+echo -n "Los Angeles	: "; date "+%a %k:%M  %Y-%m-%d""  %z"
+
+#TZ=US/Samoa ; export TZ
+#echo -n "American Samoa	: "; date "+%a %k:%M  %Y-%m-%d""   -11"
+
+#TZ=Pacific/Kiritimati. ; export TZ
+#echo -n "Kiritimati	: "; date "+%a %k:%M  %Y-%m-%d""   -14"
+
+#echo ""
+
