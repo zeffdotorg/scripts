@@ -1,0 +1,28 @@
+#!/bin/bash
+
+usage()
+{
+   echo "$0 <URL>";
+   exit
+}
+
+PATTERN="^https?://[^\.]{1,}";
+if [ $# != 1 ];
+then
+   usage; 
+elif [[ ! $1 =~ $PATTERN ]]; 
+then 
+   usage;
+fi
+
+set -e
+WHICH="/usr/bin/which";
+CURL="$($WHICH curl)";
+GREP="$($WHICH grep)";
+SED="$($WHICH sed)";
+URL="$1";
+
+$CURL -s https://www.googleapis.com/urlshortener/v1/url \
+  -H "Content-Type: application/json" \
+  -d "{\"longUrl\": \"${URL}\"}" \
+  | $GREP "\"id\":" | $SED 's/.*"\(http[^"]\+\)".*/\1/'
